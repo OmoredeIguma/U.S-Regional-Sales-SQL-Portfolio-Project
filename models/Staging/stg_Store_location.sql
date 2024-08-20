@@ -1,4 +1,4 @@
-WITH store_location AS (
+WITH store_location_cte AS (
     Store_id
     City_Name
     County

@@ -1,4 +1,4 @@
-WITH sales_team AS (
+WITH sales_team_cte AS (
     SALES_TEAMID AS Salesteam_id
     SALES_TEAM
     REGION

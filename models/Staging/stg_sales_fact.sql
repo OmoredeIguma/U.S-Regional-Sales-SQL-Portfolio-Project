@@ -1,9 +1,9 @@
-WITH Sales_fact AS(
+WITH Sales_fact_cte AS(
     select
     Saleschannel AS Sales_channel
     Procureddate AS Procured_date
     Orderdate AS Order_date
-    Shipdate AS Shipdate
+    Shipdate AS Ship_date
     Deliverydate AS Delivery_date
     Salesteamid AS Salesteam_id
     Customerid AS Customer_id

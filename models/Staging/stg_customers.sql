@@ -1,4 +1,4 @@
-WITH Customers AS(
+WITH Customers_cte AS(
     select
     customersid AS customers_id
     customers_names
