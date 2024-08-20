@@ -1,5 +1,5 @@
 WITH sales_team_cte AS (
-    SALES_TEAMID AS Salesteam_id
+    SALES_TEAMID
     SALES_TEAM
     REGION
 FROM {{ source('ecom', 'Sales_Team') }}
