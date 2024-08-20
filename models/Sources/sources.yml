@@ -1,0 +1,43 @@
+version: 2
+
+sources:
+  - name: ecom
+    description: This is an e-commerce dataset from Kaggle
+    database: Port_Project
+    schema: Analytics  
+    tables:
+      - name: Customers
+        description: A record containing customers' information
+        columns:
+          - name: Customersid
+            description: Primary key of the customers table
+            tests:
+              - unique
+              - not_null
+      - name: Products
+        description: A record containing product information
+        columns:
+          - name: Productsid
+            description: Primary key of the products table
+            tests:
+              - unique
+              - not_null
+      - name: Sales_fact
+        description: A record of foregin keys
+      - name: Sales_Team
+        description: A record of Sales team's information
+        columns:
+          - name: sales_teamid
+            description: Primary key of the Sales_Team table
+            tests:
+              - unique
+              - not_null
+      - name: Store_Location
+        description: A record of Store_Locations information
+        columns:
+          - name: Storeid
+            description: Primary key of the Store_Location table
+            tests:
+              - unique
+              - not_null
+     
