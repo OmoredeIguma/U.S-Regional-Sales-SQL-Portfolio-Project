@@ -1,18 +1,18 @@
 WITH Sales_fact AS(
     select
-    SALESCHANNEL
-    PROCUREDDATE
-    ORDERDATE
-    SHIPDATE
-    DELIVERYDATE
-    SALESTEAMID
-    CUSTOMERID
-    STOREID
-    PRODUCTID
-    ORDERQUANTITY
-    DISCOUNTEDAPPLIED
-    UNITPRICE
-    UNITCOST
-    FROM {{ source('ecom', 'Sales_fact') }}
+    Saleschannel AS Sales_channel
+    Procureddate AS Procured_date
+    Orderdate AS Order_date
+    Shipdate AS Shipdate
+    Deliverydate AS Delivery_date
+    Salesteamid AS Salesteam_id
+    Customerid AS Customer_id
+    Storeid AS Store_id
+    Productid AS Product_id
+    Orderquantity AS Order_quantity
+    Discountedapplied AS Discounted_applied
+    Unitprice AS Unit_price
+    Unitcost AS Unit_cost
+FROM {{ source('ecom', 'Sales_fact') }}
 )
 select * from {{ source('ecom', 'Sales_fact') }}
