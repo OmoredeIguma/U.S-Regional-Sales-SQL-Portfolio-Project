@@ -9,7 +9,7 @@ models:
         tests:
           - unique
           - not_null
-  - name: stg_products
+  - name: stg_Products
     description: One record per product
     columns:
       - name: product_id
@@ -19,7 +19,7 @@ models:
           - not_null
   - name: stg_sales_fact
     description: A table containing multiple forgein keys as well as unit price,cost,discount applied and order quantity
-  - name: stg_sales_team
+  - name: stg_Sales_Team
     description: A table containing sales team records
     columns:
       - name: team_id
@@ -27,7 +27,7 @@ models:
         tests:
           - unique
           - not_null
-  - name: stg_store_location
+  - name: stg_Store_location
     description: A table containing the various store locations across the United States
     columns:
       - name: Store_id
