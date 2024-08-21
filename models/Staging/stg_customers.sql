@@ -1,6 +1,6 @@
 WITH Customers_cte AS(
     select
-    customersid AS customers_id
+    customer_id
     customers_names
 FROM {{ source('ecom', 'Customers') }}
 )

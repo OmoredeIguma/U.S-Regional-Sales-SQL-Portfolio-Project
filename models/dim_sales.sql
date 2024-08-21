@@ -35,10 +35,10 @@ Total_Revenue_by_sales_person AS (
         st.SALES_TEAMID,
         ROUND(SUM((Unitprice * Orderquantity) * (1 - Discountedapplied)), 0) AS Total_Revenue_by_sales_person
     FROM 
-    {{ source('ecom', 'Sales_fact') }}
+    {{ source('ecom', 'Sales_fact') }} as sf
     LEFT JOIN 
-        sales_team st ON st.sales_teamid = sf.salesteamid
+        SALES_TEAM st ON st.SALES_TEAMID= sf.salesteamid
     GROUP BY 
-        st.Sales_Team, st.SALES_TEAMID
+        st.SALES_TEAM, st.SALES_TEAMID
     ORDER BY 
         Total_Revenue_by_sales_person DESC
