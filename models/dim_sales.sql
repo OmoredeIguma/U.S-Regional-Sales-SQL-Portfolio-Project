@@ -37,7 +37,7 @@ Total_Revenue_by_sales_person AS (
     FROM 
     {{ source('ecom', 'Sales_fact') }} as sf
     LEFT JOIN 
-        Sales_Team AS st ON st.Team_ID= sf.Team_ID
+        Team AS st ON st.Team_ID = sf.Team_ID
     GROUP BY 
         st.Team_Names, st.Team_ID
     ORDER BY 

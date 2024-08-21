@@ -9,7 +9,7 @@ sources:
       - name: Customers
         description: A record containing customers' information
         columns:
-          - name: Customersid
+          - name: Customers_ID
             description: Primary key of the customers table
             tests:
               - unique
@@ -17,17 +17,17 @@ sources:
       - name: Products
         description: A record containing product information
         columns:
-          - name: Productsid
+          - name: Product_ID
             description: Primary key of the products table
             tests:
               - unique
               - not_null
       - name: Sales_fact
         description: A record of foregin keys
-      - name: Sales_Team
+      - name: Team
         description: A record of Sales team's information
         columns:
-          - name: sales_teamid
+          - name: Team_ID
             description: Primary key of the Sales_Team table
             tests:
               - unique
@@ -35,7 +35,7 @@ sources:
       - name: Store_Location
         description: A record of Store_Locations information
         columns:
-          - name: Storeid
+          - name: Store_ID
             description: Primary key of the Store_Location table
             tests:
               - unique
