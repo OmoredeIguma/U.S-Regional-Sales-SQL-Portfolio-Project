@@ -39,5 +39,6 @@ models:
   Portfolio Project:
     # Applies to all files under models/example/
      Marts:
-        +materialized: table
+        ecom_marts:
+          +Materialized: table
    
