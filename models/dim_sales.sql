@@ -29,7 +29,7 @@ SELECT
 FROM 
 		{{ source('ecom', 'Sales_fact') }}
 ),
-Total_Revenue_by_sales_person AS (
+Total_Revenue_per_sales_person AS (
     SELECT 
         st.Team_Names,
         st.Team_ID,
@@ -94,6 +94,26 @@ Total_Product_Revenue AS (
         prod.product_name, prod.product_id
     ORDER BY 
         Total_Product_Revenue DESC
+),
+Total_Sales_Channel_Revenue AS (
+    SELECT sf.Sales_Channel, 
+    ROUND(SUM((Unit_Price*order_Quantity) * (1-discount_applied)),0) AS Total_Sales_Channel_Revenue
+    FROM 
+            {{ source('ecom', 'Sales_fact') }} sf
+    LEFT JOIN 
+        {{ source('ecom', 'Products') }} AS prod ON prod.product_id = sf.product_id
+    LEFT JOIN 
+        {{ source('ecom', 'Customers') }} AS cust ON cust.customer_id = sf.customer_id
+    LEFT JOIN 
+        {{ source('ecom', 'Store_Location') }} AS sl ON sl.store_id = sf.store_id
+    GROUP BY Sales_Channel
+),
+Total_Orders_Per_Sales_Channels AS (
+SELECT sf.Sales_Channel,
+COUNT(Sales_Channel) AS Total_Orders_Per_Sales_Channels
+FROM 
+		{{ source('ecom', 'Sales_fact') }} sf
+GROUP BY Sales_Channel
 ),
 Average_delivery_days AS (
     SELECT 
