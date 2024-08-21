@@ -1,3 +1,5 @@
+version: 2
+
 models:
   - name: Total Revenue
     description: "Calculates the total revenue by multiplying unit price by order quantity and adjusting for discounts"
