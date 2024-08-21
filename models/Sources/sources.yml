@@ -9,7 +9,7 @@ sources:
       - name: Customers
         description: A record containing customers' information
         columns:
-          - name: Customers_ID
+          - name: Customer_ID
             description: Primary key of the customers table
             tests:
               - unique
