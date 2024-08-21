@@ -1,3 +1,8 @@
+{{
+    config(
+        materialized='table'
+    )
+}}
 WITH Total_Revenue_per_sales_person_cte AS (
     SELECT *
     FROM {{ source('ecom', 'Sales_fact') }}

@@ -1,3 +1,8 @@
+{{
+    config(
+        materialized='table'
+    )
+}}
 WITH Average_delivery_days_cte AS (
     SELECT *
     FROM {{ source('ecom', 'Sales_fact') }}

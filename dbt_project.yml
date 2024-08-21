@@ -36,9 +36,6 @@ clean-targets:         # directories to be removed by `dbt clean`
 # using the `{{ config(...) }}` macro.
 
 models:
-  Portfolio Project:
+  my_new_project:
     # Applies to all files under models/example/
-     Marts:
-        ecom_marts:
-          +Materialized: table
-   
+    models:

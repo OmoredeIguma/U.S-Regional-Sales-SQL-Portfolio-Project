@@ -1,3 +1,8 @@
+{{
+    config(
+        materialized='table'
+    )
+}}
 WITH Profit_per_Customer_cte AS (
     SELECT *
     FROM {{ source('ecom', 'Sales_fact') }}

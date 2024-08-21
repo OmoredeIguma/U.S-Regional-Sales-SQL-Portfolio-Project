@@ -1,3 +1,8 @@
+{{
+    config(
+        materialized='table'
+    )
+}}
 WITH Total_Orders_Per_Sales_Channels_cte AS (
     SELECT *
     FROM {{ source('ecom', 'Sales_fact') }}

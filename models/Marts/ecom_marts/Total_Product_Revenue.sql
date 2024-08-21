@@ -1,3 +1,8 @@
+{{
+    config(
+        materialized='table'
+    )
+}}
 WITH Total_Product_Revenue_cte AS (
     SELECT *
     FROM {{ source('ecom', 'Sales_fact') }}
