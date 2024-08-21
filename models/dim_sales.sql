@@ -23,7 +23,7 @@ Total_Revenue AS (
         ROUND(SUM((Unit_Price * Order_Quantity) * (1 - Discount_Applied)), 0) AS Total_Revenue
     FROM {{ source('ecom', 'Sales_fact') }}
 ),
-TOTAL Profit AS (
+Total_Profit AS (
 SELECT 
 	ROUND(SUM((Unit_Price-Unit_Cost) * Order_Quantity * (1-Discount_Applied)),0) AS Total_Profit
 FROM 
@@ -43,7 +43,7 @@ Total_Revenue_per_sales_person AS (
     ORDER BY 
         Total_Revenue_by_sales_person DESC
 ),
-Revenue_Per_State AS (
+Revenue_per_State AS (
     SELECT 
         sl.state,
         ROUND(SUM((Unit_Price * Order_Quantity) * (1 - Discount_Applied)), 0) AS Revenue_Per_State
@@ -60,7 +60,7 @@ Revenue_Per_State AS (
     ORDER BY 
         Revenue_Per_State DESC
 ),
-Profit_per_customer AS (
+Profit_per_Customer AS (
     SELECT 
         cust.Customer_Names,
         ROUND(SUM((Unit_Price - Unit_Cost) * Order_Quantity * (1 - Discount_Applied)), 0) AS Profit_per_customer
@@ -126,5 +126,35 @@ Average_shipping_days AS (
         AVG(DATEDIFF(DAY, Order_Date, Ship_Date)) AS average_shipping_days
     FROM 
          {{ source('ecom', 'Sales_fact') }}
-
-
+)
+SELECT 
+    tr.Total_Revenue,
+    tp.Total_Profit,
+    trsp.Total_Revenue_by_sales_person,
+    rps.Revenue_Per_State,
+    ppc.Profit_per_customer,
+    tpr.Total_Product_Revenue,
+    tscr.Total_Sales_Channel_Revenue,
+    topsc.Total_Orders_Per_Sales_Channels,
+    ad.average_delivery_days,
+    asd.average_shipping_days
+FROM
+    Total_Revenue tr
+JOIN
+    Total_Profit tp ON 1=1
+JOIN
+    Total_Revenue_per_sales_person trsp ON 1=1
+JOIN
+    Revenue_Per_State rps ON 1=1
+JOIN
+    Profit_per_customer ppc ON 1=1
+JOIN
+    Total_Product_Revenue tpr ON 1=1
+JOIN
+    Total_Sales_Channel_Revenue tscr ON 1=1
+JOIN
+    Total_Orders_Per_Sales_Channels topsc ON 1=1
+JOIN
+    Average_delivery_days ad ON 1=1
+JOIN
+    Average_shipping_days asd ON 1=1
