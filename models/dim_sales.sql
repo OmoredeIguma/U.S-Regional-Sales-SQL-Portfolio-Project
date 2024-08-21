@@ -9,7 +9,7 @@ products AS (
     select * from {{ source('ecom', 'Products') }}
 ),
 sales_team AS (
-    select * from {{ source('ecom', 'Team') }}
+    select * from {{ source('ecom', 'Sales_Team') }}
 ),
 store_location AS (
     select * from {{ source('ecom', 'Store_Location') }}
@@ -37,7 +37,7 @@ Total_Revenue_by_sales_person AS (
     FROM 
     {{ source('ecom', 'Sales_fact') }} as sf
     LEFT JOIN 
-        Team AS st ON st.Team_ID = sf.Team_ID
+        {{ source('ecom', 'Sales_Team') }} AS st ON st.team_id = sf.team_id
     GROUP BY 
         st.Team_Names, st.Team_ID
     ORDER BY 

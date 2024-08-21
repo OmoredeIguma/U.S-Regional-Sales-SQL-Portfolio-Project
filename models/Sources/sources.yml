@@ -24,7 +24,7 @@ sources:
               - not_null
       - name: Sales_fact
         description: A record of foregin keys
-      - name: Team
+      - name: Sales_Team
         description: A record of Sales team's information
         columns:
           - name: Team_ID
