@@ -9,7 +9,7 @@ products AS (
     select * from {{ source('ecom', 'Products') }}
 ),
 sales_team AS (
-    select * from {{ source('ecom', 'Sales_Team') }}
+    select * from {{ source('ecom', 'Team') }}
 ),
 store_location AS (
     select * from {{ source('ecom', 'Store_Location') }}
@@ -20,25 +20,25 @@ sales_fact AS (
 
 Total_Revenue AS (
     SELECT 
-        ROUND(SUM((Unitprice * Orderquantity) * (1 - Discountedapplied)), 0) AS Total_Revenue
+        ROUND(SUM((Unit_Price * Order_Quantity) * (1 - Discount_Applied)), 0) AS Total_Revenue
     FROM {{ source('ecom', 'Sales_fact') }}
 ),
 TOTAL Profit AS (
 SELECT 
-	ROUND(SUM((Unitprice-Unitcost) * Orderquantity * (1-Discountedapplied)),0) AS Total_Profit
+	ROUND(SUM((Unit_Price-Unit_Cost) * Order_Quantity * (1-Discount_Applied)),0) AS Total_Profit
 FROM 
 		{{ source('ecom', 'Sales_fact') }}
 ),
 Total_Revenue_by_sales_person AS (
     SELECT 
-        st.Sales_Team,
-        st.SALES_TEAMID,
-        ROUND(SUM((Unitprice * Orderquantity) * (1 - Discountedapplied)), 0) AS Total_Revenue_by_sales_person
+        st.Team_Names,
+        st.Team_ID,
+        ROUND(SUM((Unit_Price * Order_Quantity) * (1 - Discount_Applied)), 0) AS Total_Revenue_by_sales_person
     FROM 
     {{ source('ecom', 'Sales_fact') }} as sf
     LEFT JOIN 
-        SALES_TEAM st ON st.SALES_TEAMID= sf.salesteamid
+        Sales_Team AS st ON st.Team_ID= sf.Team_ID
     GROUP BY 
-        st.SALES_TEAM, st.SALES_TEAMID
+        st.Team_Names, st.Team_ID
     ORDER BY 
         Total_Revenue_by_sales_person DESC
