@@ -7,8 +7,8 @@ models:
       - name: Total_Revenue
         description: "Total revenue after applying discounts"
         data_tests:
-          - unique
-          - not_null
+        - unique
+        - not_null
   - name: Total_Profit
     description: "Calculates the total profit by subtracting the unit price from the unit cost, multiplying the order quantity and adjusting for discounts"
     columns:
@@ -20,7 +20,7 @@ models:
   - name: Revenue_per_State
     description: "Calculates the total revenue by multiplying unit price by order quantity and adjusting for discounts"
     columns:
-      - name: Revenue_per_State
+      - name: Revenue_Per_State
         description: "Total revenue generated for each state"
         data_tests:
           - unique
