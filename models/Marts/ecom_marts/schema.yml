@@ -2,55 +2,55 @@ version: 2
 
 models:
   - name: Total_Revenue
-    description: Calculates the total revenue by multiplying unit price by order quantity and adjusting for discounts
+    description: "Calculates the total revenue by multiplying unit price by order quantity and adjusting for discounts"
     columns:
       - name: Total_Revenue
-        description: Total revenue after applying discounts
+        description: "Total revenue after applying discounts"
 
   - name: Total_Profit
-    description: Calculates the total profit by subtracting the unit price from the unit cost, multiplying the order quantity and adjusting for discounts
+    description: "Calculates the total profit by subtracting the unit price from the unit cost, multiplying the order quantity and adjusting for discounts"
     columns:
       - name: Total_Profit
-        description: Total profit after applying discounts
+        description: "Total profit after applying discounts"
       
   - name: Revenue_per_State
-    description: Calculates the total revenue by multiplying unit price by order quantity and adjusting for discounts 
+    description: "Calculates the total revenue by multiplying unit price by order quantity and adjusting for discounts"
     columns:
       - name: Revenue_per_State
-        description:  Total revenue generated for each state
+        description: "Total revenue generated for each state"
       
   - name: Profit_per_Customer
-    description: Calculates the total profit generated from each customers by subtracting the unit price from the unit cost, multiplying the order quantity and adjusting for discounts
+    description: "Calculates the total profit generated from each customers by subtracting the unit price from the unit cost, multiplying the order quantity and adjusting for discounts"
     columns:
       - name: Profit_per_Customer
-        description: Total profit after applying discounts
+        description: "Total profit after applying discounts"
       
   - name: Total_Product_Revenue
-    description: Calculates the total revenue for each product by multiplying unit price by order quantity and adjusting for discounts
+    description: "Calculates the total revenue for each product by multiplying unit price by order quantity and adjusting for discounts"
     columns:
       - name: Total_Product_Revenue
-        description: Total revenue after applying discounts
+        description: "Total revenue after applying discounts"
        
   - name: Total_Sales_Channel_Revenue
-    description: Calculates the total revenue for each sales channel by multiplying unit price by order quantity and adjusting for discounts
+    description: "Calculates the total revenue for each sales channel by multiplying unit price by order quantity and adjusting for discounts"
     columns:
       - name: Total_Sales_Channel_Revenue
-        description: Total revenue after applying discounts
+        description: "Total revenue after applying discounts"
        
   - name: = Total_Orders_Per_Sales_Channels
-    description: Calculates the total number of orders placed for each sales channel
+    description: "Calculates the total number of orders placed for each sales channel"
     columns:
       - name: Total_Orders_Per_Sales_Channels
-        description: Total orders placed for the various channels
+        description: "Total orders placed for the various channels"
        
   - name: Average_delivery_days
-    description: Calculates the average days for an order to be delivered
+    description: "Calculates the average days for an order to be delivered"
     columns:
       - name: Average_delivery_days
-        description: Average days an order is delivered
+        description: "Average days an order is delivered"
       
   - name: Average_shipping_days
-    description: Calculates the average days for an order to be shipped
+    description: "Calculates the average days for an order to be shipped"
     columns:
       - name: Average_shipping_days
-        description: Average days an order is delivered
+        description: "Average days an order is delivered"
