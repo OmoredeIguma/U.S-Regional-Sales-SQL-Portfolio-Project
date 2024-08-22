@@ -8,6 +8,6 @@ WITH Average_delivery_days_cte AS (
     FROM {{ source('ecom', 'Sales_fact') }}
 )
  SELECT 
-        AVG(DATEDIFF(DAY, Order_Date, Ship_Date)) AS average_shipping_days
+        AVG(DATEDIFF(DAY, Order_Date, Ship_Date)) AS Average_shipping_days
     FROM 
          {{ source('ecom', 'Sales_fact') }}
