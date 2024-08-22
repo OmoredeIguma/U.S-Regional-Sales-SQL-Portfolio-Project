@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: Total Revenue
+  - name: Total_Revenue
     description: "Calculates the total revenue by multiplying unit price by order quantity and adjusting for discounts"
     columns:
       - name: Total_Revenue
@@ -9,7 +9,7 @@ models:
         tests:
           - not_null
           - unique
-  - name: Total profit
+  - name: Total_Profit
     description: "Calculates the total profit by subtracting the unit price from the unit cost, multiplying the order quantity and adjusting for discounts"
     columns:
       - name: Total_Profit
@@ -17,7 +17,7 @@ models:
         tests:
           - not_null
           - unique
-  - name: Total revenue per sales person
+  - name: Total_Revenue_per_sales_person
     description: "Calculates the total revenue by multiplying unit price by order quantity and adjusting for discounts for each sales made by a sales person"
     columns:
       - name: Total_Revenue_per_sales_person
@@ -25,7 +25,7 @@ models:
         tests:
           - not_null
           - unique
-  - name: Revenue per State
+  - name: Revenue_per_State
     description: "Calculates the total revenue by multiplying unit price by order quantity and adjusting for discounts"
     columns:
       - name: Revenue_per_State
@@ -33,7 +33,7 @@ models:
         tests:
           - not_null
           - unique
-  - name: Profit per Customer
+  - name: Profit_per_Customer
     description: "Calculates the total profit generated from each customers by subtracting the unit price from the unit cost, multiplying the order quantity and adjusting for discounts"
     columns:
       - name: Profit_per_Customer
@@ -41,7 +41,7 @@ models:
         tests:
           - not_null
           - unique
-  - name: Total Product Revenue
+  - name: Total_Product_Revenue
     description: "Calculates the total revenue for each product by multiplying unit price by order quantity and adjusting for discounts"
     columns:
       - name: Total_Product_Revenue
@@ -49,7 +49,7 @@ models:
         tests:
           - not_null
           - unique
-  - name: Total Sales Channel Revenue
+  - name: Total_Sales_Channel_Revenue
     description: "Calculates the total revenue for each sales channel by multiplying unit price by order quantity and adjusting for discounts"
     columns:
       - name: Total_Sales_Channel_Revenue
@@ -57,7 +57,7 @@ models:
         tests:
           - not_null
           - unique
-  - name: = Total Orders Per Sales Channels
+  - name: = Total_Orders_Per_Sales_Channels
     description: "Calculates the total number of orders placed for each sales channel"
     columns:
       - name: Total_Orders_Per_Sales_Channels
@@ -65,7 +65,7 @@ models:
         tests:
           - not_null
           - unique
-  - name: Average delivery days
+  - name: Average_delivery_days
     description: "Calculates the average days for an order to be delivered"
     columns:
       - name: Average_delivery_days
@@ -73,7 +73,7 @@ models:
         tests:
           - not_null
           - unique
-  - name: Average shipping days
+  - name: Average_shipping_days
     description: "Calculates the average days for an order to be shipped"
     columns:
       - name: Average_shipping_days
