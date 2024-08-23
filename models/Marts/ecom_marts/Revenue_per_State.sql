@@ -3,7 +3,7 @@
         materialized='table'
     )
 }}
-WITH Total_Revenue_per_sales_person_cte AS (
+WITH Revenue_Per_State AS (
     SELECT *
     FROM {{ source('ecom', 'Sales_fact') }}
 )
