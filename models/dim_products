@@ -1,0 +1,6 @@
+WITH Product_data AS (
+    Select product_id
+            product_name
+    FROM {{ ref('stg_product') }}
+)
+Select * FROM Product_data
