@@ -1,0 +1,58 @@
+version: 2
+
+models:
+  - name: dim_customers
+    description: "Dimension table for customers"
+    columns:
+      - name: customer_id
+        tests:
+          - not_null
+          - unique
+
+  - name: dim_products
+    description: "Dimension table for products"
+    columns:
+      - name: product_id
+        tests:
+          - not_null
+          - unique
+
+  - name: dim_sales_team
+    description: "Dimension table for sales teams"
+    columns:
+      - name: team_id
+        tests:
+          - not_null
+          - unique
+
+  - name: dim_store_location
+    description: "Dimension table for store locations"
+    columns:
+      - name: store_id
+        tests:
+          - not_null
+          - unique
+
+  - name: fct_sales
+    description: "Fact table for sales transactions"
+    columns:
+      - name: customer_id
+        tests:
+          - relationships:
+              to: ref('customer_dim')
+              field: customer_id
+      - name: product_id
+        tests:
+          - relationships:
+              to: ref('product_dim')
+              field: product_id
+      - name: store_id
+        tests:
+          - relationships:
+              to: ref('store_location_dim')
+              field: store_id
+      - name: team_id
+        tests:
+          - relationships:
+              to: ref('sales_team_dim')
+              field: team_id
