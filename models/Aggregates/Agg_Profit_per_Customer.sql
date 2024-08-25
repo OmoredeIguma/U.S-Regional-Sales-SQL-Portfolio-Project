@@ -1,3 +1,8 @@
+{{
+    config(
+        materialized='table'
+    )
+}}
 SELECT 
         cust.Customer_Names,
         ROUND(SUM((Unit_Price - Unit_Cost) * Order_Quantity * (1 - Discount_Applied)), 0) AS Profit_per_customer

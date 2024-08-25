@@ -1,3 +1,8 @@
+ {{
+    config(
+        materialized='table'
+    )
+}}
  SELECT 
         sl.state,
         ROUND(SUM((Unit_Price * Order_Quantity) * (1 - Discount_Applied)), 0) AS Revenue_Per_State

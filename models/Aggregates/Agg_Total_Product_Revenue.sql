@@ -1,3 +1,8 @@
+{{
+    config(
+        materialized='table'
+    )
+}}
 SELECT 
         prod.product_name,
         prod.product_id,

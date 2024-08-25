@@ -1,3 +1,8 @@
+{{
+    config(
+        materialized='table'
+    )
+}}
 SELECT sf.Sales_Channel,
 COUNT(Sales_Channel) AS Total_Orders_Per_Sales_Channels
 FROM 
