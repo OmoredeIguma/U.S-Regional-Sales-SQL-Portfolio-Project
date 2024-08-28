@@ -39,20 +39,20 @@ models:
       - name: customer_id
         data_tests:
           - relationships:
-              to: ref('customer_dim')
+              to: ref('dim_customers')
               field: customer_id
       - name: product_id
         data_tests:
           - relationships:
-              to: ref('product_dim')
+              to: ref('dim_products')
               field: product_id
       - name: store_id
         data_tests:
           - relationships:
-              to: ref('store_location_dim')
+              to: ref('dim_store_location')
               field: store_id
       - name: team_id
         data_tests:
           - relationships:
-              to: ref('sales_team_dim')
+              to: ref('dim_sales_team')
               field: team_id
