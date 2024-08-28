@@ -1,3 +1,8 @@
+{{
+    config(
+        materialized='table'
+    )
+}}
 WITH store_location_data AS (
     SELECT store_id,
             city_name,

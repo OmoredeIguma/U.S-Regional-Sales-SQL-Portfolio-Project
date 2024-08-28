@@ -1,3 +1,8 @@
+{{
+    config(
+        materialized='table'
+    )
+}}
 WITH customer_data AS (
     SELECT customer_id,
             customer_names

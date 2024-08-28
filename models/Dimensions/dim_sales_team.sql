@@ -1,3 +1,8 @@
+{{
+    config(
+        materialized='table'
+    )
+}}
 WITH sales_team_data AS (
     SELECT team_id,
             team_names,

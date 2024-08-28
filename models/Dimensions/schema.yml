@@ -1,0 +1,34 @@
+version: 2
+
+models:
+  - name: dim_customers
+    description: "Dimension table for customers"
+    columns:
+      - name: customer_id
+        data_tests:
+          - not_null
+          - unique
+
+  - name: dim_products
+    description: "Dimension table for products"
+    columns:
+      - name: product_id
+        data_tests:
+          - not_null
+          - unique
+
+  - name: dim_sales_team
+    description: "Dimension table for sales teams"
+    columns:
+      - name: team_id
+        data_tests:
+          - not_null
+          - unique
+
+  - name: dim_store_location
+    description: "Dimension table for store locations"
+    columns:
+      - name: store_id
+        data_tests:
+          - not_null
+          - unique
