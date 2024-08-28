@@ -5,9 +5,9 @@
 }}
 WITH Average_delivery_days_cte AS (
     SELECT *
-    FROM {{ source('ecom', 'Sales_fact') }}
+    FROM {{ ref('fct_sales') }}
 )
  SELECT 
         AVG(DATEDIFF(DAY, Order_Date, Ship_Date)) AS Average_shipping_days
     FROM 
-         {{ source('ecom', 'Sales_fact') }}
+         {{ ref('fct_sales') }}

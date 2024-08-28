@@ -5,19 +5,19 @@
 }}
 WITH Profit_per_Customer_cte AS (
     SELECT *
-    FROM {{ source('ecom', 'Sales_fact') }}
+    FROM {{ ref('fct_sales') }}
 )
  SELECT 
         cust.Customer_Names,
         ROUND(SUM((Unit_Price - Unit_Cost) * Order_Quantity * (1 - Discount_Applied)), 0) AS Profit_per_customer
     FROM 
-        {{ source('ecom', 'Sales_fact') }} sf
+        {{ ref('fct_sales') }} sf
     LEFT JOIN 
-      {{ source('ecom', 'Products') }} AS prd ON prd.product_id = sf.product_id
+       {{ ref('dim_products') }} AS prod ON prod.product_id = sf.product_id
     LEFT JOIN 
-        {{ source('ecom', 'Customers') }} AS cust ON cust.customer_id = sf.customer_id
+        {{ ref('dim_customers') }} AS cust ON cust.customer_id = sf.customer_id
     LEFT JOIN 
-        {{ source('ecom', 'Store_Location') }} AS sl ON sl.store_id = sf.store_id
+        {{ ref('dim_store_location') }} AS sl ON sl.store_id = sf.store_id
     GROUP BY 
         cust.Customer_Names
     ORDER BY 
