@@ -5,9 +5,9 @@
 }}
 WITH Total_Profit_cte AS (
     SELECT *
-    FROM {{ source('ecom', 'Sales_fact') }}
+    FROM {{ ref('fct_sales') }}
 )
 SELECT 
 	ROUND(SUM((Unit_Price-Unit_Cost) * Order_Quantity * (1-Discount_Applied)),0) AS Total_Profit
 FROM 
-		{{ source('ecom', 'Sales_fact') }}
+		{{ ref('fct_sales') }}
