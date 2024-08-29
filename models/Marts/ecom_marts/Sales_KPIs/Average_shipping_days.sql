@@ -1,8 +1,3 @@
-{{
-    config(
-        materialized='table'
-    )
-}}
 WITH Average_delivery_days_cte AS (
     SELECT *
     FROM {{ ref('fct_sales') }}

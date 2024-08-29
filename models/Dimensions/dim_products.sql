@@ -1,8 +1,3 @@
-{{
-    config(
-        materialized='table'
-    )
-}}
 WITH Product_data AS (
     SELECT product_id,
             product_name

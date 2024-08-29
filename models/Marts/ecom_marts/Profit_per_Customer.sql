@@ -1,8 +1,3 @@
-{{
-    config(
-        materialized='table'
-    )
-}}
 WITH Profit_per_Customer_cte AS (
     SELECT *
     FROM {{ ref('fct_sales') }}

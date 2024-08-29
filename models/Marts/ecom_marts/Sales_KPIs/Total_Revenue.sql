@@ -1,8 +1,3 @@
-{{
-    config(
-        materialized='table'
-    )
-}}
 WITH Total_Revenue_cte AS (
     SELECT * 
     FROM {{ ref('fct_sales') }} sf

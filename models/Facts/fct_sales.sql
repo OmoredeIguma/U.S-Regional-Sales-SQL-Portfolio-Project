@@ -1,8 +1,3 @@
-{{
-    config(
-        materialized='table'
-    )
-}}
 SELECT 
         sf.sales_channel,
         sf.procured_date,
