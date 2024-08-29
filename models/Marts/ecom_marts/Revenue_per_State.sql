@@ -1,8 +1,3 @@
-{{
-    config(
-        materialized='table'
-    )
-}}
 WITH Revenue_Per_State AS (
     SELECT *
     FROM {{ ref('fct_sales') }}
