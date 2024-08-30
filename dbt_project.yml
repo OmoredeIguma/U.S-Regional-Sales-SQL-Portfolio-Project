@@ -38,6 +38,7 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   Portfolio_Project:
     # Applies to all files under models/example/
+    Models:
     Dimensions:
       +materialized: table
 
