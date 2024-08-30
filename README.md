@@ -1,1 +1,5 @@
 # Portfolio-Project
+This project utilized the U.S Regional Sales dataset from Kaggle. Snowflake was used as the database, while DBT Cloud was used for the data transformation and Tableau was used as the BI tool for data visualization. The dataset consisted of various tables that formed a star schema. The dataset were imported using a DDL in Snowflake, DBT Cloud was connected to the database where data transformation process took place. This invovled the creation of a Source models, Staging models, Dimension table, Fact table and Marts.
+
+  The source table served as the bedrock of the datasets. The staging tables served as a foundation for light data transformation, the dimension models provided context for the data, the fact table model contained the quantitative data and foreign keys that are connected to related dimension tables.
+  The Marts holds the aggregation derived from the dataset. The ref function in DBT Cloud was used to reference the fact table and dimension tables furthermore, the JOIN clause in SQL ws used to join the various dimension table together to provide more context to the aggregates.
