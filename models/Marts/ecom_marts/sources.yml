@@ -11,7 +11,7 @@ sources:
         columns:
           - name: Customer_ID
             description: Primary key of the customers table
-            tests:
+            data_tests:
               - unique
               - not_null
       - name: Products
@@ -19,7 +19,7 @@ sources:
         columns:
           - name: Product_ID
             description: Primary key of the products table
-            tests:
+            data_tests:
               - unique
               - not_null
       - name: Sales_fact
@@ -29,7 +29,7 @@ sources:
         columns:
           - name: Team_ID
             description: Primary key of the Sales_Team table
-            tests:
+            data_tests:
               - unique
               - not_null
       - name: Store_Location
@@ -37,7 +37,7 @@ sources:
         columns:
           - name: Store_ID
             description: Primary key of the Store_Location table
-            tests:
+            data_tests:
               - unique
               - not_null
      
