@@ -1,6 +1,6 @@
 WITH Sales_fact_cte AS(
     SELECT
-    Sales_channel
+    Sales_channel,
     Procured_date,
     Order_date,
     Ship_date,
