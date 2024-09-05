@@ -1,7 +1,4 @@
-WITH Total_Product_Revenue_cte AS (
-    SELECT *
-    FROM  {{ ref('fct_sales') }} sf
-)
+WITH Total_Product_Revenue AS (
  SELECT 
         prod.product_name,
         prod.product_id,
@@ -18,3 +15,6 @@ WITH Total_Product_Revenue_cte AS (
         prod.product_name, prod.product_id
     ORDER BY 
         Total_Product_Revenue DESC
+)
+SELECT *
+FROM Total_Product_Revenue
