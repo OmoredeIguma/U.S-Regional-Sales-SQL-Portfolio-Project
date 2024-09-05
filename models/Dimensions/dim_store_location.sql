@@ -1,4 +1,4 @@
-WITH store_location_data AS (
+WITH dim_store_location AS (
     SELECT store_id,
             city_name,
             county,
@@ -16,4 +16,4 @@ WITH store_location_data AS (
             time_zone
     FROM {{ ref('stg_Store_location') }}
 )
-SELECT * FROM store_location_data
+SELECT * FROM dim_store_location
