@@ -1,7 +1,4 @@
 WITH Revenue_Per_State AS (
-    SELECT *
-    FROM {{ ref('fct_sales') }}
-)
  SELECT 
         sl.state,
         ROUND(SUM((Unit_Price * Order_Quantity) * (1 - Discount_Applied)), 0) AS Revenue_Per_State
@@ -17,3 +14,6 @@ WITH Revenue_Per_State AS (
         sl.state
     ORDER BY 
         Revenue_Per_State DESC
+)
+SELECT *
+FROM Revenue_Per_State

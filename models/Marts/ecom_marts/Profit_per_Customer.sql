@@ -1,7 +1,4 @@
-WITH Profit_per_Customer_cte AS (
-    SELECT *
-    FROM {{ ref('fct_sales') }}
-)
+WITH Profit_per_Customer AS (
  SELECT 
         cust.Customer_Names,
         ROUND(SUM((Unit_Price - Unit_Cost) * Order_Quantity * (1 - Discount_Applied)), 0) AS Profit_per_customer
@@ -17,3 +14,6 @@ WITH Profit_per_Customer_cte AS (
         cust.Customer_Names
     ORDER BY 
         Profit_per_customer DESC
+)
+SELECT *
+FROM Profit_per_Customer
