@@ -15,4 +15,5 @@ WITH Sales_fact_cte AS(
     Unit_cost
 FROM {{ source('ecom', 'Sales_fact') }}
 )
-select * from {{ source('ecom', 'Sales_fact') }}
+select * 
+from Sales_fact_cte
