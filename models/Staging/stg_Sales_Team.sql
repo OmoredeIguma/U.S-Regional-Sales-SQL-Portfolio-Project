@@ -5,4 +5,5 @@ WITH sales_team_cte AS (
     REGION,
 FROM {{ source('ecom', 'Sales_Team') }}
 )
-select * from {{ source('ecom', 'Sales_Team') }}
+select * 
+from sales_team_cte

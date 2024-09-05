@@ -17,4 +17,4 @@ WITH store_location_cte AS (
     Time_Zone
 FROM {{ source('ecom', 'Store_Location') }}
 )
-select * FROM {{ source('ecom', 'Store_Location') }}
+select * FROM store_location_cte
