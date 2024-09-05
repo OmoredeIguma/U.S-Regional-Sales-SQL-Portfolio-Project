@@ -1,9 +1,9 @@
 WITH Total_Orders_Per_Sales_Channels AS (
 SELECT 
-    sf.Sales_Channel,
+    sales_fact.Sales_Channel,
 COUNT(Sales_Channel) AS Total_Orders_Per_Sales_Channels
 FROM 
-		{{ ref('fct_sales') }} sf
+		{{ ref('fct_sales') }} sales_fact
 GROUP BY Sales_Channel
 )
 

@@ -1,17 +1,17 @@
 WITH Profit_per_Customer AS (
  SELECT 
-        cust.Customer_Names,
+        customers.Customer_Names,
         ROUND(SUM((Unit_Price - Unit_Cost) * Order_Quantity * (1 - Discount_Applied)), 0) AS Profit_per_customer
     FROM 
-        {{ ref('fct_sales') }} sf
+        {{ ref('fct_sales') }} sales_fact
     LEFT JOIN 
-       {{ ref('dim_products') }} AS prod ON prod.product_id = sf.product_id
+       {{ ref('dim_products') }} AS products ON products.product_id = sales_fact.product_id
     LEFT JOIN 
-        {{ ref('dim_customers') }} AS cust ON cust.customer_id = sf.customer_id
+        {{ ref('dim_customers') }} AS customers ON customers.customer_id = sales_fact.customer_id
     LEFT JOIN 
-        {{ ref('dim_store_location') }} AS sl ON sl.store_id = sf.store_id
+        {{ ref('dim_store_location') }} AS store_location ON store_location.store_id = sales_fact.store_id
     GROUP BY 
-        cust.Customer_Names
+        customers.Customer_Names
     ORDER BY 
         Profit_per_customer DESC
 )

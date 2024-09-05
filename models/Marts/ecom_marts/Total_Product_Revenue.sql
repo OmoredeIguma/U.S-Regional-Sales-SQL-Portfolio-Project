@@ -1,18 +1,18 @@
 WITH Total_Product_Revenue AS (
  SELECT 
-        prod.product_name,
-        prod.product_id,
+        products.product_name,
+        products.product_id,
         ROUND(SUM((Unit_Price * Order_Quantity) * (1 - Discount_Applied)), 0) AS Total_Product_Revenue
     FROM 
-         {{ ref('fct_sales') }} sf
+         {{ ref('fct_sales') }} sales_fact
     LEFT JOIN 
-         {{ ref('dim_products') }}  AS prod ON prod.product_id = sf.product_id
+         {{ ref('dim_products') }}  AS products ON products.product_id = sales_fact.product_id
     LEFT JOIN 
-       {{ ref('dim_sales_team') }} st ON st.team_id = sf.team_id
+       {{ ref('dim_sales_team') }} AS sales_team ON sales_team.team_id = sales_fact.team_id
     LEFT JOIN 
-         {{ ref('dim_store_location') }} AS sl ON sl.store_id = sf.store_id
+         {{ ref('dim_store_location') }} AS store_location ON store_location.store_id = sales_fact.store_id
     GROUP BY 
-        prod.product_name, prod.product_id
+        products.product_name, products.product_id
     ORDER BY 
         Total_Product_Revenue DESC
 )
