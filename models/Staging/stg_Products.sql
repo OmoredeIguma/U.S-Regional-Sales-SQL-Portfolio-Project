@@ -1,8 +1,8 @@
-WITH Products_cte AS(
+WITH products AS(
     SELECT
-        product_id,
-        product_name
+        _ProductID AS Product_ID,
+        "Product Name" AS Product_Name
 FROM {{ source('ecom', 'Products') }}
 )
 select * 
-from Products_cte
+from Products
