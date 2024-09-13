@@ -25,7 +25,7 @@ models:
           - not_null
           - unique
 
-  - name: dim_store_location
+  - name: dim_store_locations
     description: "Dimension table for store locations"
     columns:
       - name: Store_ID
