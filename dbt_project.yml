@@ -48,8 +48,8 @@ models:
     Marts:
       ecom_marts:
         +materialized: table
-      Sales_KPIs:
-        +materialized: table
+        Sales_KPIs:
+          +materialized: table
 
     Staging:
       +materialized: view
