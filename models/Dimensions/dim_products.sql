@@ -1,6 +1,7 @@
-WITH dim_products AS (
-    SELECT product_id,
-            product_name
+WITH products_dim AS (
+    SELECT
+        Product_ID,
+        Product_Name
     FROM {{ ref('stg_Products') }}
 )
-SELECT * FROM dim_products
+SELECT * FROM products_dim

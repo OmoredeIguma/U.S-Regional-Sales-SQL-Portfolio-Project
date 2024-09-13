@@ -1,6 +1,7 @@
-WITH dim_customer AS (
-    SELECT customer_id,
-            customer_names
+WITH customers_dim AS (
+    SELECT
+        Customer_ID,
+        Customer_Names
     FROM {{ ref('stg_customers') }}
 )
-SELECT * FROM dim_customer
+SELECT * FROM customers_dim

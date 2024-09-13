@@ -8,7 +8,7 @@ WITH store_location AS (
     Type,
     Latitude,
     Longitude,
-    AreaCode,
+    AreaCode AS Area_Code,
     Population,
     "Household Income" AS Household_Income,
     "Median Income" AS Median_Income,

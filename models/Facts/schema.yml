@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: fct_sales
+    description: "Fact table for sales transactions"
+    columns:
+      - name: Customer_ID
+        data_tests:
+          - relationships:
+              to: ref('dim_customers')
+              field: Customer_ID
+      - name: Product_ID
+        data_tests:
+          - relationships:
+              to: ref('dim_products')
+              field: Product_ID
+      - name: Store_ID
+        data_tests:
+          - relationships:
+              to: ref('dim_store_location')
+              field: Store_ID
+      - name: Team_ID
+        data_tests:
+          - relationships:
+              to: ref('dim_sales_team')
+              field: Team_ID
