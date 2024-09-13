@@ -48,7 +48,6 @@ models:
     Marts:
       ecom_marts:
         +materialized: table
-        
       Sales_KPIs:
         +materialized: table
 
