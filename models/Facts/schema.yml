@@ -17,7 +17,7 @@ models:
       - name: Store_ID
         data_tests:
           - relationships:
-              to: ref('dim_store_location')
+              to: ref('dim_store_locations')
               field: Store_ID
       - name: Team_ID
         data_tests:
