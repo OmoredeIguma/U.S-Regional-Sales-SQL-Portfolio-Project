@@ -1,23 +1,23 @@
 SELECT 
-        sales_fact.Sales_channel,
-        sales_fact.procured_date,
-        sales_fact.order_date,
-        sales_fact.ship_date,
-        sales_fact.delivery_date,
-        sales_fact.team_id,
-        sales_fact.customer_id,
-        sales_fact.store_id,
-        sales_fact.product_id,
-        sales_fact.order_quantity,
-        sales_fact.discount_applied,
-        sales_fact.unit_price,
-        sales_fact.unit_cost,
+        sales_orders.sales_channel,
+        sales_orders.procured_date,
+        sales_orders.order_date,
+        sales_orders.ship_date,
+        sales_orders.delivery_date,
+        sales_orders.team_id,
+        sales_orders.customer_id,
+        sales_orders.store_id,
+        sales_orders.product_id,
+        sales_orders.order_quantity,
+        sales_orders.discount_applied,
+        sales_orders.unit_price,
+        sales_orders.unit_cost,
         customers.customer_names,
         products.product_name,
-        store_location.state,
-        sales_team.team_names
-FROM {{ ref('stg_sales_fact') }} sales_fact
-JOIN {{ ref('dim_customers') }} AS customers ON sales_fact.customer_id = customers.customer_id
-JOIN {{ ref('dim_products') }} AS products ON sales_fact.product_id = products.product_id
-JOIN {{ ref('dim_sales_team') }} AS sales_team ON sales_fact.team_id = sales_team.team_id
-JOIN {{ ref('dim_store_location') }} AS store_location ON sales_fact.store_id = store_location.store_id
+        store_locations.state,
+        sales_team.team_name
+FROM {{ ref('stg_sales_orders') }} sales_orders
+JOIN {{ ref('dim_customers') }} customers ON sales_orders.customer_id = customers.customer_id
+JOIN {{ ref('dim_products') }} products ON sales_orders.product_id = products.product_id
+JOIN {{ ref('dim_sales_team') }} sales_team ON sales_orders.team_id = sales_team.team_id
+JOIN {{ ref('dim_store_locations') }} store_locations ON sales_orders.store_id = store_locations.store_id

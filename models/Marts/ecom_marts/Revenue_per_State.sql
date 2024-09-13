@@ -1,19 +1,15 @@
-WITH Revenue_Per_State AS (
- SELECT 
-        store_location.state,
+SELECT 
+        store_locations.state,
         ROUND(SUM((Unit_Price * Order_Quantity) * (1 - Discount_Applied)), 0) AS Revenue_Per_State
     FROM 
-      {{ ref('fct_sales') }} AS sales_fact
+      {{ ref('fct_sales') }} AS sales_orders
     LEFT JOIN 
-      {{ ref('dim_products') }} AS products ON products.product_id = sales_fact.product_id
+      {{ ref('dim_products') }} AS products ON products.product_id = sales_orders.product_id
     LEFT JOIN 
-        {{ ref('dim_customers') }} AS customers ON customers.customer_id = sales_fact.customer_id
+        {{ ref('dim_customers') }} AS customers ON customers.customer_id = sales_orders.customer_id
     LEFT JOIN 
-        {{ ref('dim_store_location') }} AS store_location ON store_location.store_id = sales_fact.store_id
+        {{ ref('dim_store_locations') }} AS store_locations ON store_locations.store_id = sales_orders.store_id
     GROUP BY 
-        store_location.state
+        store_locations.state
     ORDER BY 
         Revenue_Per_State DESC
-)
-SELECT *
-FROM Revenue_Per_State

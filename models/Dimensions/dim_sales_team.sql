@@ -1,7 +1,7 @@
-WITH dim_sales_team AS (
-    SELECT team_id,
-            team_names,
-            region
-    FROM {{ ref('stg_Sales_Team') }}
+WITH sales_team_dim AS (
+    SELECT
+        Team_ID,
+        Team_Name
+    FROM {{ ref('stg_Sales_team') }}
 )
-SELECT * FROM dim_sales_team
+SELECT * FROM sales_team_dim

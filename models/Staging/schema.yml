@@ -4,7 +4,7 @@ models:
   - name: stg_customers
     description: One record per customer
     columns:
-      - name: customer_id
+      - name: Customer_ID
         description: Primary key
         data_tests:
           - unique
@@ -12,25 +12,25 @@ models:
   - name: stg_Products
     description: One record per product
     columns:
-      - name: product_id
+      - name: Product_ID
         description: Primary key
         data_tests:
           - unique
           - not_null
-  - name: stg_sales_fact
+  - name: stg_sales_orders
     description: A table containing multiple forgein keys as well as unit price,cost,discount applied and order quantity
-  - name: stg_Sales_Team
+  - name: stg_Sales_team
     description: A table containing sales team records
     columns:
-      - name: team_id
+      - name: Team_ID
         description: Primary key
         data_tests:
           - unique
           - not_null
-  - name: stg_Store_location
+  - name: stg_Store_locations
     description: A table containing the various store locations across the United States
     columns:
-      - name: Store_id
+      - name: Store_ID
         description: Primary key
         data_tests:
           - unique

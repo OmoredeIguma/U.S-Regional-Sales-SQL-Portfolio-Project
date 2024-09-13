@@ -4,23 +4,23 @@ models:
   - name: fct_sales
     description: "Fact table for sales transactions"
     columns:
-      - name: customer_id
+      - name: Customer_ID
         data_tests:
           - relationships:
               to: ref('dim_customers')
-              field: customer_id
-      - name: product_id
+              field: Customer_ID
+      - name: Product_ID
         data_tests:
           - relationships:
               to: ref('dim_products')
-              field: product_id
-      - name: store_id
+              field: Product_ID
+      - name: Store_ID
         data_tests:
           - relationships:
               to: ref('dim_store_location')
-              field: store_id
-      - name: team_id
+              field: Store_ID
+      - name: Team_ID
         data_tests:
           - relationships:
               to: ref('dim_sales_team')
-              field: team_id
+              field: Team_ID

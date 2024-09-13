@@ -4,7 +4,7 @@ models:
   - name: dim_customers
     description: "Dimension table for customers"
     columns:
-      - name: customer_id
+      - name: Customer_ID
         data_tests:
           - not_null
           - unique
@@ -12,7 +12,7 @@ models:
   - name: dim_products
     description: "Dimension table for products"
     columns:
-      - name: product_id
+      - name: Product_ID
         data_tests:
           - not_null
           - unique
@@ -20,7 +20,7 @@ models:
   - name: dim_sales_team
     description: "Dimension table for sales teams"
     columns:
-      - name: team_id
+      - name: Team_ID
         data_tests:
           - not_null
           - unique
@@ -28,7 +28,7 @@ models:
   - name: dim_store_location
     description: "Dimension table for store locations"
     columns:
-      - name: store_id
+      - name: Store_ID
         data_tests:
           - not_null
           - unique

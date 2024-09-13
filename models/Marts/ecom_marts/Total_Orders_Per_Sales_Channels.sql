@@ -1,11 +1,5 @@
-WITH Total_Orders_Per_Sales_Channels AS (
-SELECT 
-    sales_fact.Sales_Channel,
+SELECT sales_orders.Sales_Channel,
 COUNT(Sales_Channel) AS Total_Orders_Per_Sales_Channels
 FROM 
-		{{ ref('fct_sales') }} sales_fact
+		{{ ref('fct_sales') }} sales_orders
 GROUP BY Sales_Channel
-)
-
-SELECT *
-FROM Total_Orders_Per_Sales_Channels

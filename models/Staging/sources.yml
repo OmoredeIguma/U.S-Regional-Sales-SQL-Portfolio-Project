@@ -3,13 +3,13 @@ version: 2
 sources:
   - name: ecom
     description: This is an e-commerce dataset from Kaggle
-    database: Port_Project
-    schema: Analytics  
+    database: PORT_PROJECT
+    schema: ANALYTICS  
     tables:
       - name: Customers
         description: A record containing customers' information
         columns:
-          - name: Customer_ID
+          - name: _CustomerID
             description: Primary key of the customers table
             data_tests:
               - unique
@@ -17,25 +17,25 @@ sources:
       - name: Products
         description: A record containing product information
         columns:
-          - name: Product_ID
+          - name: _ProductID
             description: Primary key of the products table
             data_tests:
               - unique
               - not_null
-      - name: Sales_fact
+      - name: Sales_Orders
         description: A record of foregin keys
       - name: Sales_Team
         description: A record of Sales team's information
         columns:
-          - name: Team_ID
+          - name: _SalesTeamID
             description: Primary key of the Sales_Team table
             data_tests:
               - unique
               - not_null
-      - name: Store_Location
+      - name: Store_Locations
         description: A record of Store_Locations information
         columns:
-          - name: Store_ID
+          - name: _StoreID
             description: Primary key of the Store_Location table
             data_tests:
               - unique

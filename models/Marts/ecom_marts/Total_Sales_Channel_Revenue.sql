@@ -1,16 +1,12 @@
-WITH Total_Sales_Channel_Revenue AS (
 SELECT 
-    sales_fact.Sales_Channel, 
+    sales_orders.Sales_Channel, 
     ROUND(SUM((Unit_Price*order_Quantity) * (1-discount_applied)),0) AS Total_Sales_Channel_Revenue
-FROM 
-    {{ ref('fct_sales') }} sales_fact
+    FROM 
+             {{ ref('fct_sales') }} sales_orders
     LEFT JOIN 
-         {{ ref('dim_products') }} AS products ON products.product_id = sales_fact.product_id
+         {{ ref('dim_products') }} AS products ON products.product_id = sales_orders.product_id
     LEFT JOIN 
-        {{ ref('dim_customers') }} AS customers ON customers.customer_id = sales_fact.customer_id
+        {{ ref('dim_customers') }} AS customers ON customers.customer_id = sales_orders.customer_id
     LEFT JOIN 
-        {{ ref('dim_store_location') }} AS store_location ON store_location.store_id = sales_fact.store_id
+        {{ ref('dim_store_locations') }} AS store_locations ON store_locations.store_id = sales_orders.store_id
     GROUP BY Sales_Channel
-)
-SELECT *
-FROM Total_Sales_Channel_Revenue
