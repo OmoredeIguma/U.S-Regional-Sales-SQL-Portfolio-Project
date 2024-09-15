@@ -22,7 +22,7 @@ END AS month_of_the_year,
     REPLACE("Bounce Rate",'%','') AS Bounce_Rate,
     REPLACE(Pageviews, ',','') AS Pageviews,
     "Avg.Session Duration" AS Avg_Session_Duration,
-    "Conversion Rate (%)" AS Conversion_Rate,
+   REPLACE("Conversion Rate (%)", '<0.01', '0.01') AS conversion_rate,
     REPLACE("Transactions", ',','') AS Transactions,
     REPLACE(Revenue, ',','') AS Revenue,
     REPLACE("Quantity Sold", ',','') AS Quantity_Sold

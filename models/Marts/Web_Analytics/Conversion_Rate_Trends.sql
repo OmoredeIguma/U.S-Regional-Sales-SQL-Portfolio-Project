@@ -7,5 +7,5 @@ FROM
 GROUP BY Year, 
         month_of_the_year
 ORDER BY Year,
-    month_of_the_year;
+    month_of_the_year
    
