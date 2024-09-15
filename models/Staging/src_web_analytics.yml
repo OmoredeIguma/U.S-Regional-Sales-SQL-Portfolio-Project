@@ -1,0 +1,38 @@
+version: 2
+
+sources:
+  - name: WEB
+    description: This is a web analytics dataset from Kaggle
+    database: PORT_PROJECT
+    schema: ANALYTICS  
+    tables:
+      - name: Web_Analytics
+        description: A record containing customers' information
+        columns:
+          - name: Source / Medium
+            description: Primary key of the customers table
+          - name: Year
+            description: "Year when the data was recorded"
+          - name: Month of the year
+            description: "Month when the data was recorded"
+          - name: Users
+            description: "Number of current users"
+          - name: New Users
+            description: "Number of new users"
+          - name: Sessions
+            description: "Number of sessions"
+          - name: Bounce Rate
+            description: "Percentage of how often a user switched from page to page"
+          - name: Pageviews
+            description: "Number of view per page"
+          - name: Avg. Session Duration
+            description: "Average time a user spends on a page"
+          - name: Conversion Rate (%)
+            description: "Percentage of how often a user engages with the site"
+          - name: Transactions
+            description: "Number of transactions made on the site"
+          - name: Revenue
+            description: "Amount of revenue made"
+          - name: Quantity Sold
+            description: "Number of quantity of an item sold"
+
