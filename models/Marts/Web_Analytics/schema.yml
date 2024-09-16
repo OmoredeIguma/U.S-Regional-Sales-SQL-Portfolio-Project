@@ -1,0 +1,13 @@
+version: 2
+
+models:
+  - name: Bounce_Rate_Trends
+    description: "Calculates the average rate at which a user leaves the site"
+  - name: Conversion_Rate_Trends
+    description: "Calculates the average rate at which a user purchased a product on the website"
+  - name: Growth_Rate
+    description: "Calculates the growth rate of website by determining the percentage of current and new users acquired"
+  - name: Monthly_Trend
+    description: "Calculates the monthly trend by summing up the current users, sessions and new users"
+  - name: Pageviews_per_Sessions
+    description: "Calculates the pageviews acquired per sessions"
