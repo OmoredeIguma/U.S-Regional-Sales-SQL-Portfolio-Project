@@ -15,6 +15,6 @@ WITH store_location AS (
     "Land Area" AS Land_Area,
     "Water Area" AS Water_Area,
     "Time Zone" AS Time_Zone
-FROM {{ source('ecom', 'Store_Locations') }}
+FROM {{ source('eCom', 'Store_Locations') }}
 )
 select * FROM store_location

@@ -15,6 +15,6 @@ WITH store_location_dim AS (
             Land_Area,
             Water_Area,
             Time_Zone
-    FROM {{ ref('stg_Store_locations') }}
+    FROM {{ ref('stg_eCom__Store_locations') }}
 )
 select * from store_location_dim

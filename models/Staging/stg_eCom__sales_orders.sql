@@ -15,7 +15,7 @@ WITH Sales_orders AS(
     "Discount Applied" AS Discount_Applied,
     REPLACE("Unit Price", ',','') AS Unit_Price,
     REPLACE("Unit Cost", ',','') AS Unit_Cost,
-FROM {{ source('ecom', 'Sales_Orders') }}
+FROM {{ source('eCom', 'Sales_Orders') }}
 )
 select *
 from Sales_orders
