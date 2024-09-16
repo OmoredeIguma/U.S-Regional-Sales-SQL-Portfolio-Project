@@ -2,7 +2,7 @@ version: 2
 
 models:
   - name: stg_eCom__customers
-    description: One record per customer
+    description: "One record per customer"
     columns:
       - name: Customer_ID
         description: Primary key
@@ -10,7 +10,7 @@ models:
           - unique
           - not_null
   - name: stg_eCom__Products
-    description: One record per product
+    description: "One record per product"
     columns:
       - name: Product_ID
         description: Primary key
@@ -18,9 +18,30 @@ models:
           - unique
           - not_null
   - name: stg_eCom__sales_orders
-    description: A table containing multiple forgein keys as well as unit price,cost,discount applied and order quantity
+    description: "A table containing multiple forgein keys as well as unit price,cost,discount applied and order quantity"
+    columns:
+    - name: Team_ID
+      description: Foregin key
+      data_tests:
+        - unique
+        - not_null
+    - name: Customer_ID
+      description: Foregin key
+      data_tests:
+        - unique
+        - not_null
+    - name: Store_ID
+      description: Foregin key
+      data_tests:
+        - unique
+        - not_null
+    - name: Product_ID
+      description: Foregin key
+      data_tests:
+        - unique
+        - not_null       
   - name: stg_Sales_team
-    description: A table containing sales team records
+    description: "A table containing sales team records"
     columns:
       - name: Team_ID
         description: Primary key
@@ -28,7 +49,7 @@ models:
           - unique
           - not_null
   - name: stg_eCom__Store_locations
-    description: A table containing the various store locations across the United States
+    description: "A table containing the various store locations across the United States"
     columns:
       - name: Store_ID
         description: Primary key
