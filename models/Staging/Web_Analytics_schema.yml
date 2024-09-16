@@ -14,7 +14,7 @@ models:
       - name: New_Users
         description: "Number of new users on the website"
       - name: Sessions
-        description: 
+        description: "Average time spent on the site"
       - name: Bounce_Rate
         description: "The rate at which a user moves from leaves the website for another"
       - name: Pageviews
