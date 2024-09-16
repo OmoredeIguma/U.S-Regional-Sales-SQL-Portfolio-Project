@@ -46,6 +46,8 @@ models:
       +materialized: table
     
     Marts:
+      Web_Analytics:
+        +materialized: table
       eCommerce:
         +materialized: table
         Sales_KPIs:
