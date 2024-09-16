@@ -5,7 +5,5 @@
 FROM 
     {{ ref('stg_web_analytics') }}
 GROUP BY 
-   Year, 
-   month_of_the_year
-ORDER BY 
-Year
+   Year,month_of_the_year
+ORDER BY Year
