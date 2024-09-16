@@ -5,7 +5,6 @@ models:
     description: "This table contains web analytics dataset"
     columns:
       - name: Source / Medium
-        description: 
       - name: Year
         description: "Year when the website traffic or user interaction occurred"
       - name: month_of_the_year
