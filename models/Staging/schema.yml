@@ -40,7 +40,7 @@ models:
       data_tests:
         - unique
         - not_null       
-  - name: stg_eComm__Sales_team
+  - name: stg_eCom__Sales_team
     description: "A table containing sales team records"
     columns:
       - name: Team_ID
