@@ -23,7 +23,7 @@ sources:
               - unique
               - not_null
       - name: Sales_Orders
-        description: A record of foregin keys
+        description: A record of transactions and foregin keys
       - name: Sales_Team
         description: A record of Sales team's information
         columns:
