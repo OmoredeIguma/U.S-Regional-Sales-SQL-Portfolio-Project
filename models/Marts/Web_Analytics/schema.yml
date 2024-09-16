@@ -3,11 +3,34 @@ version: 2
 models:
   - name: Bounce_Rate_Trends
     description: "Calculates the average rate at which a user leaves the site"
+    columns:
+      - name: Year
+      - name: month_of_the_year
+      - name: Avg_bounce_rate
   - name: Conversion_Rate_Trends
     description: "Calculates the average rate at which a user purchased a product on the website"
+    columns:
+      - name: Year
+      - name: month_of_the_year
+      - name: Avg_conversion_rate
   - name: Growth_Rate
     description: "Calculates the growth rate of website by determining the percentage of current and new users acquired"
+    columns:
+      - name: Year
+      - name: month_of_the_year
+      - name: Previous_users
+      - name: Growth_Rate
   - name: Monthly_Trend
     description: "Calculates the monthly trend by summing up the current users, sessions and new users"
+    columns:
+      - name: Year
+      - name: month_of_the_year
+      - name: total_users
+      - name: total_new_users
+      - name: total_sessions
   - name: Pageviews_per_Sessions
     description: "Calculates the pageviews acquired per sessions"
+    columns:
+      - name: Year
+      - name: month_of_the_year
+      - name: pageviews_per_sessions
