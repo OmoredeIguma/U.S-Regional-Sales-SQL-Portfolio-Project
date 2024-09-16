@@ -1,7 +1,7 @@
 version: 2
 
 sources:
-  - name: ecom
+  - name: eCom
     description: This is an e-commerce dataset from Kaggle
     database: PORT_PROJECT
     schema: ANALYTICS  
