@@ -7,7 +7,7 @@ sources:
     schema: ANALYTICS  
     tables:
       - name: Web_Analytics
-        description: A record containing customers' information
+        description: A web analytics dataset from Kaggle
         columns:
           - name: Source / Medium
             description: Primary key of the customers table
