@@ -1,0 +1,32 @@
+version: 2
+
+models:
+  - name: stg_WEB__Web_Analytics
+    description: "This table contains web analytics dataset"
+    columns:
+      - name: Source / Medium
+        description: 
+      - name: Year
+        description: "Year when the website traffic or user interaction occurred"
+      - name: month_of_the_year
+        description: "The month when the website traffic or user interaction occurred"
+      - name: Users
+        description: "Number of users on the website"
+      - name: New_Users
+        description: "Number of new users on the website"
+      - name: Sessions
+        description: 
+      - name: Bounce_Rate
+        description: "The rate at which a user moves from leaves the website for another"
+      - name: Pageviews
+        description: "Number of pageviews"
+      - name: Avg_Session_Duration
+        description: "The average time a user spends on the website"
+      - name: conversion_rate
+        description: "The percentage of users who have completed a desired action"
+      - name: Transactions
+        description: "Number of transactions made on the website"
+      - name: Revenue
+        description: "Amount of revenue generated per transaction"
+      - name: Quantity_Sold
+        description: "Amount of quantity sold on the website"
