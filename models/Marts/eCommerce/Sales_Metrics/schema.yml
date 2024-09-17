@@ -41,3 +41,5 @@ models:
         data_tests:
           - unique
           - not_null
+  - name: Revenue_per_Sales_Person
+    description: "Calculates the revenue generate by each sales person"
