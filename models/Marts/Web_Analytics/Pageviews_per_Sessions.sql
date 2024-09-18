@@ -6,4 +6,4 @@ FROM
     {{ ref('stg_WEB__Web_Analytics') }}
 GROUP BY 
    Year,month_of_the_year
-ORDER BY Year
+ORDER BY month_of_the_year
