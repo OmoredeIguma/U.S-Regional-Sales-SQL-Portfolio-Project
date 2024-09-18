@@ -1,6 +1,6 @@
 SELECT
         Year, Month_of_the_Year,
-        SUM(Users) as total_users,
+        SUM(Users) as total_ current_users,
         SUM(New_Users) as total_new_users,
         SUM(Sessions) as total_sessions
 FROM

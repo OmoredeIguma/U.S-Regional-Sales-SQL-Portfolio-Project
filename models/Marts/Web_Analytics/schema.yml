@@ -13,14 +13,14 @@ models:
       - name: Year
       - name: month_of_the_year
       - name: Avg_conversion_rate
-  - name: Growth_Rate
+  - name: Monthly_Growth_Rate
     description: "Calculates the growth rate of website by determining the percentage of current and new users acquired"
     columns:
       - name: Year
       - name: month_of_the_year
       - name: Previous_users
-      - name: Growth_Rate
-  - name: Monthly_Trend
+      - name: Monthly_Growth_Rate
+  - name: Traffic_Trend
     description: "Calculates the monthly trend by summing up the current users, sessions and new users"
     columns:
       - name: Year
