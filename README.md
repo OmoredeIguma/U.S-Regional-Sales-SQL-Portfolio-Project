@@ -43,73 +43,40 @@ Sales and Revenue Analysis
 7.	What states generates the most revenue?
 8.	What sales person generates the most revenue?
 
-Insights
+# Insights
 What customers generates the most profit?
-•	The customer “Medline” was the most profitable with a total profit of $765,837 generated.
+Insights: The customer “Medline” was the most profitable with a total profit of $765,837 generated.
+
 Delivery and shipping Analysis
 What is the average delivery day?
-•	The average delivery day was 21 days 
+Insights:	The average delivery day was 21 days.
+
 What is the average shipping day?
-•	The average shipping day was 15 days
+Insights:	The average shipping day was 15 days.
 
 
 Sales and Revenue Analysis 
 1.	What is the total revenue generated?
 Insight: The total revenue generated was $ 73,143,380
+
 2.	What is the total profit generated?
 Inisght: The total profit generated was $27,291,388
-3.	What is the profit per customers?
+
+3.	What is the revenue per sales channel?
 Inisght: 
-> Medline 765837
-> Apotheca Ltd 701138
-> Pure Group	652958
-> ETUDE Ltd	644998
-> OUR Ltd	638858
-> Ei 	627733
-> Apollo Ltd	627509
-> Ohio 	624744
-> Trigen 	620265
-> Victory Ltd	605521
+In-Store	30,102,905
 
-4.	What is the revenue per sales channel?
-Inisght: 
-In-Store	30102905.0
-Online	21698559.0
-Distributor	13169148.0
-Wholesale	8172769.0
+4.	What products generates the most revenue?
+Inisght: Blankets were the most profitable product sold generating a total of	$1,650,902
 
 
-5.	What products generates the most revenue?
-Inisght: 
-Blankets	1650902
-Ornaments	1648318
-Floral	1633697
-Dining Furniture	1624594
-Table Lamps	1612535
-TV and video	1608853
-Sculptures	1595510
-Bar Tools	1594396
-Wall Frames	1590447
-Vanities	1586897
+5.	What are the total numbers of orders per sales channels?
+Inisght: The In-Store channel was where most of the orders were placed with a total of 3,298 orders
 
-6.	What are the total numbers of orders per sales channels?
-Inisght: 
-In-Store	3298
-Online	2425
-Distributor	1375
-Wholesale	893
-Enter dbt command
-
-7.	What states generates the most revenue?
+6.	What states generates the most revenue?
 Inisght: California was the most profitable state with a revenue of $15,186,331 generated.
-8.	What sales person generates the most revenue?
+
+7.	What sales person generates the most revenue?
 Inisght: Donald Reynolds was the best performing sales person with a revenue generation of $2,980,413
-
-
-select customer_city, count(customer_unique_id) as number_customers
-from olist_customers
-group by customer_city
-order by number_customers DESC
-limit 10;
 
 
