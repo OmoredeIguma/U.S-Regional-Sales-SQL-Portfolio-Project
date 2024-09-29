@@ -60,16 +60,16 @@ Insight: The total revenue generated was $ 73,143,380
 Inisght: The total profit generated was $27,291,388
 3.	What is the profit per customers?
 Inisght: 
-Medline 	765837
-Apotheca Ltd	701138
-Pure Group	652958
-ETUDE Ltd	644998
-OUR Ltd	638858
-Ei 	627733
-Apollo Ltd	627509
-Ohio 	624744
-Trigen 	620265
-Victory Ltd	605521
+> Medline 765837
+> Apotheca Ltd 701138
+> Pure Group	652958
+> ETUDE Ltd	644998
+> OUR Ltd	638858
+> Ei 	627733
+> Apollo Ltd	627509
+> Ohio 	624744
+> Trigen 	620265
+> Victory Ltd	605521
 
 4.	What is the revenue per sales channel?
 Inisght: 
