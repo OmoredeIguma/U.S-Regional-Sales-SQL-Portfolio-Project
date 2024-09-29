@@ -1,4 +1,5 @@
 # Portfolio-Project
+OVERVIEW
 This project explores the rich dataset provided by the Kaggle website. This dataset provides comprehensive insights into US regional sales data across different sales channels, including In-Store, Online, Distributor, and Wholesale. With a total of 17,992 rows and 15 columns, this dataset encompasses a wide range of information, from order and product details to sales performance metrics. It offers a comprehensive overview of sales transactions and customer interactions, enabling deep analysis of sales patterns, trends, and potential opportunities. Through this analysis, I aim to uncover valuable insights into customer behaviour, product performance, and overall business trends within the e-commerce domain.
 Objective 1 - Database Design and Importing Data
 The first objective is to import the data to a relational database in Snowflake. There are 5 tables in this dataset which have a relation with each other. The following tasks was performed:
