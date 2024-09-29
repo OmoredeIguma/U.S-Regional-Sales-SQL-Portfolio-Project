@@ -24,7 +24,7 @@ Snowflake: The database cloud storage platform for storing the datasets. <br />
 
 DBT Cloud: For data transformations and creation of models. <br />
 
-Tableau Public: For data [visualizations]([https://public.tableau.com/app/profile/omorede.iguma/viz/USREGIONALSALESDASHBOARD_2024/Dashboard]). <br />
+Tableau Public: For data [visualizations](https://public.tableau.com/app/profile/omorede.iguma/viz/USREGIONALSALESDASHBOARD_2024/Dashboard). <br />
 
 # Exploratory Data Analysis
 Exploratory Data Analysis was carried out to finds answers to questions which will help gain insights. There are three different analyses based on the data to better understand overall e-commerce business.
