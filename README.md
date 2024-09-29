@@ -26,6 +26,8 @@ DBT Cloud: For data transformations and creation of models. <br />
 
 Tableau Public: For data [visualizations](https://public.tableau.com/app/profile/omorede.iguma/viz/USREGIONALSALESDASHBOARD_2024/Dashboard). <br />
 
+# Transformations
+Data transformation was carried out using DBT Cloud IDE. Staging models were created for transformation purposes such as renaming columns, date casting etc which references the source table. Facts and Dimensions tables were created to organize and structure the data which references the staging models. The fact and dimension models were joined to create aggregations and answer the questions about the data.
 # Exploratory Data Analysis
 Exploratory Data Analysis was carried out to finds answers to questions which will help gain insights. There are three different analyses based on the data to better understand overall e-commerce business.
 •	Customer and Seller Analysis
