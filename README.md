@@ -48,36 +48,36 @@ Sales and Revenue Analysis
 8.	What sales person generates the most revenue?
 
 # Insights
-_What customers generates the most profit?_ <br />
+* _What customers generates the most profit?_ <br />
 Insights: The customer “Medline” was the most profitable with a total profit of $765,837 generated.
 
-_What is the average delivery day?_ <br />
+* _What is the average delivery day?_ <br />
 Insights:	The average delivery day was 21 days.
 
-_What is the average shipping day?_ <br />
+* _What is the average shipping day?_ <br />
 Insights:	The average shipping day was 15 days.
 
-_What is the total revenue generated?_ <br />
+* _What is the total revenue generated?_ <br />
 Insight: The total revenue generated was $ 73,143,380
 
-_What is the total profit generated?_ <br />
+* _What is the total profit generated?_ <br />
 Inisght: The total profit generated was $27,291,388
 
-_What is the revenue per sales channel?_ <br />
+* _What is the revenue per sales channel?_ <br />
 Inisght: 
 In-Store	30,102,905
 
-_What products generates the most revenue?_ <br />
+* _What products generates the most revenue?_ <br />
 Inisght: Blankets were the most profitable product sold generating a total of	$1,650,902
 
 
-_What are the total numbers of orders per sales channels?_ <br />
+* _What are the total numbers of orders per sales channels?_ <br />
 Inisght: The In-Store channel was where most of the orders were placed with a total of 3,298 orders
 
-_What states generates the most revenue?_ <br />
+* _What states generates the most revenue?_ <br />
 Inisght: California was the most profitable state with a revenue of $15,186,331 generated.
 
-_What sales person generates the most revenue?_ <br />
+* _What sales person generates the most revenue?_ <br />
 Inisght: Donald Reynolds was the best performing sales person with a revenue generation of $2,980,413
 
 
