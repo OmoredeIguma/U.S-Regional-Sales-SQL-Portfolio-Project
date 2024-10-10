@@ -65,21 +65,21 @@ Insight: The total revenue generated was $ 73,143,380
 * _What is the total profit generated?_ <br />
 Inisght: The total profit generated was $27,291,388
 
-* _What is the revenue per sales channel?_ <br />
+* _What are the revenues per sales channel?_ <br />
 Inisght: 
 In-Store	30,102,905
 
-* _What products generates the most revenue?_ <br />
+* _What products generated the most revenue?_ <br />
 Inisght: Blankets were the most profitable product sold generating a total of	$1,650,902
 
 
 * _What are the total numbers of orders per sales channels?_ <br />
 Inisght: The In-Store channel was where most of the orders were placed with a total of 3,298 orders
 
-* _What states generates the most revenue?_ <br />
+* _What states generated the most revenue?_ <br />
 Inisght: California was the most profitable state with a revenue of $15,186,331 generated.
 
-* _What sales person generates the most revenue?_ <br />
+* _What sales person generated the most revenue?_ <br />
 Inisght: Donald Reynolds was the best performing sales person with a revenue generation of $2,980,413
 
 
