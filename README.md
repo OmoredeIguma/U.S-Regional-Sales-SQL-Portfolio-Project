@@ -26,9 +26,9 @@ DBT Cloud: For data transformations and creation of models. <br />
 Tableau Public: For data [visualizations](https://public.tableau.com/app/profile/omorede.iguma/viz/USREGIONALSALESDASHBOARD_2024/Dashboard). <br />
 
 # Transformations
-Data transformation was carried out using DBT Cloud IDE. Staging models were created for transformation purposes such as renaming columns, date casting, etc which references the source table. Facts and Dimensions tables were created to organize and structure the data that references the staging models. The fact and dimension models were joined to create aggregations and answer the questions about the data.
+Data transformation was carried out using DBT Cloud IDE. Staging models were created for transformation purposes such as renaming columns, date casting, etc which references the source table. Facts and Dimensions tables were created to organize and structure the data that referenced the staging models. The fact and dimension models were joined to create aggregations and answer the questions about the data.
 # Exploratory Data Analysis
-Exploratory Data Analysis was carried out to find answers to questions that will help gain insights. There are three different analyses based on the data to better understand the overall e-commerce business.
+Exploratory Data Analysis was conducted to find answers to questions that will help gain insights. There were three different analyses based on the data to better understand the overall e-commerce business.
 •	Customer and Seller Analysis
 •	Delivery and Review Analysis
 •	Sales and Revenue Analysis 
@@ -49,7 +49,7 @@ Exploratory Data Analysis was carried out to find answers to questions that will
 
 # Insights
 * _What customers generated the most profit?_ <br />
-Insights: The customer “Medline” was the most profitable with a total profit of $765,837 generated.
+Insights: The customer “Medline” was the most profitable, generating a total profit of $765,837.
 
 * _What is the average delivery day?_ <br />
 Insights:	The average delivery day was 21 days.
@@ -75,7 +75,7 @@ Insight: Blankets were the most profitable product sold generating a total of	$1
 Insight: The In-Store channel was where most of the orders were placed with a total of 3,298 orders
 
 * _What states generated the most revenue?_ <br />
-Insight: California was the most profitable state with a revenue of $15,186,331 generated.
+Insight: California was the most profitable state generating a revenue of $15,186,331.
 
 * _What salesperson generated the most revenue?_ <br />
 Insight: Donald Reynolds was the best-performing salesperson with a revenue generation of $2,980,413
