@@ -9,7 +9,6 @@ The first objective is to import the data to a relational database in Snowflake.
 •	Choosing the adequate datatypes for the data set values. <br />
 •	Creating important primary keys and foreign keys for relationship among tables. <br />
 •	Importing data into tables with particular order to maintain relation. <br />
-•	Create Entity Relationship Diagram (ERD) to show the table relations. <br />
 
 Objective 2 - Exploratory Data Analysis
 After importing the dataset to the tables, an Exploratory Data Analysis with SQL queries was performed to answer questions and generate insights about the data. This will include the following analysis: <br />
