@@ -33,18 +33,17 @@ Exploratory Data Analysis was carried out to finds answers to questions which wi
 •	Customer and Seller Analysis
 •	Delivery and Review Analysis
 •	Sales and Revenue Analysis 
-Customer and Seller Analysis
-Questions to be answer for this analysis are as follows:
-1.	What customers generates the most profit?
-Delivery and shipping Analysis
+# Customer and Seller Analysis
+1.	What customer generated the most profit?
+# Delivery and shipping Analysis
 1.	What are the average delivery days?
 2.	What are the average shipping days?
-Sales and Revenue Analysis 
+# Sales and Revenue Analysis 
 1.	What is the total revenue generated?
 2.	What is the total profit generated?
 3.	What is the profit per customers?
 4.	What is the revenue per sales channel?
-5.	What products generates the most revenue?
+5.	What product generated the most revenue?
 6.	What are the total numbers of orders per sales channels?
 7.	What states generates the most revenue?
 8.	What sales person generates the most revenue?
