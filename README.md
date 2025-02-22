@@ -12,7 +12,7 @@ The first objective is to import the data to a relational database in Snowflake.
 •	Importing data into tables in particular order to maintain relations. <br />
 
 Objective 2 - Exploratory Data Analysis
-After importing the dataset to the tables, an Exploratory Data Analysis with SQL queries was performed to answer questions and generate insights about the data. This will include the following analysis: <br />
+After importing the dataset to the tables, an Exploratory Data Analysis using SQL queries was performed to answer questions and generate insights about the data. This will include the following analysis: <br />
 •	Customer and Seller Analysis <br />
 •	Delivery Analysis <br />
 •	Sales and Revenue Analysis <br />
