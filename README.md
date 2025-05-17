@@ -1,7 +1,7 @@
 # Portfolio-Project
 # Overview
 
-This project explores the rich dataset provided by Kaggle [website](https://www.kaggle.com/datasets/talhabu/us-regional-sales-data). This dataset provides comprehensive insights into US regional sales data across different sales channels, including In-Store, Online, Distributor, and Wholesale. With 17,992 rows and 15 columns, this dataset encompasses a wide range of information, from order and product details to sales performance metrics. It offers a comprehensive overview of sales transactions and customer interactions, enabling deep analysis of sales patterns, trends, and potential opportunities. Through this analysis, I aim to uncover valuable insights into customer behaviour, product performance, and overall business trends within the e-commerce domain. <br />
+This project explores the rich dataset provided by [Kaggle by Abu Talha](https://www.kaggle.com/datasets/talhabu/us-regional-sales-data). This dataset provides comprehensive insights into US regional sales data across different sales channels, including In-Store, Online, Distributor, and Wholesale. With 17,992 rows and 15 columns, this dataset encompasses a wide range of information, from order and product details to sales performance metrics. It offers a comprehensive overview of sales transactions and customer interactions, enabling deep analysis of sales patterns, trends, and potential opportunities. Through this analysis, I aim to uncover valuable insights into customer behaviour, product performance, and overall business trends within the e-commerce domain. <br />
 <br />
 # Objectives
 Objective 1 - Database Design and Importing Data
